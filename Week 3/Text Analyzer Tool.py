@@ -5,7 +5,7 @@ char_count_with_spaces = 0                                      # Variable to ho
 char_count_without_spaces = 0                                   # Variable to hold the character count without spaces
 frequency_analysis = {}                                         # Empty dictionary to hold the frequency of characters
 palindromes = []                                                # Empty list to hold the palindromes found in the text
-readibility_score = 0                                           # Variable to hold the readibility score
+readability_score = 0                                           # Variable to hold the readibility score
 
 
 # User to enter block of text
@@ -14,7 +14,7 @@ text = input("Enter your text: ")
 
 # Function to perform analysis feature
 def analyze():
-    global word_count, char_count_with_spaces, char_count_without_spaces, frequency_analysis, palindromes, readibility_score
+    global word_count, char_count_with_spaces, char_count_without_spaces, frequency_analysis, palindromes, readability_score
 
     # WORD COUNT
     word_count = len(text.split())
@@ -61,10 +61,10 @@ def analyze():
         total_word_lenght += len(word)                          # Adds the length of the current word to the total word length
     
     if word_count != 0:                                         # Checks if the word count is not zero to avoid division by zero
-        readibility_score = total_word_lenght / word_count
+        readability_score = total_word_lenght / word_count
     else:
-        readibility_score = 0
+        readability_score = 0
 
-    print(f"Readability Score: {readibility_score: .2f}")       # Displays readability score with two decimal places
+    print(f"Readability Score: {readability_score: .2f}")       # Displays readability score with two decimal places
 
 analyze()
