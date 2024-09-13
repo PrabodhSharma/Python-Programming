@@ -26,3 +26,18 @@ class Boat(Vehicle):
     def move(self):
         # Print how a boat moves
         print("The boat sails on the water")
+
+
+# Function to demonstrate polymorphism, accepting any Vehicle subclass object
+def operate_vehicle(vehicle):
+    # This will call the move method of the passed vehicle object
+    vehicle.move()
+
+# Usage of polymorphism: create a list of various vehicle objects
+# vehicles list holds instances of Car, Bicycle, and Boat
+vehicles = [Car(), Bicycle(), Boat()]
+
+# Iterate through the vehicles list and operate each vehicle
+for vehicle in vehicles:
+    # Call the operate_vehicle function with each vehicle instance
+    operate_vehicle(vehicle)
